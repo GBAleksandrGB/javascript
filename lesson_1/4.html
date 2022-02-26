@@ -28,7 +28,11 @@
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  let userNumber = Number(prompt('Please enter a positive integer')) % 1000;
+  console.log(`${userNumber} has \
+${Math.trunc(userNumber / 100)} hundreds \
+${Math.trunc(userNumber / 10) % 10} tens \
+${userNumber % 10} units`);
 </script>
 </body>
 </html>
