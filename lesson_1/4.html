@@ -29,10 +29,10 @@
   "use strict";
 
   let userNumber = Number(prompt('Please enter a positive integer')) % 1000;
-  console.log(`${userNumber} has \
-${Math.trunc(userNumber / 100)} hundreds \
-${Math.trunc(userNumber / 10) % 10} tens \
-${userNumber % 10} units`);
+  let hundreds = Math.trunc(userNumber / 100);
+  let tens = Math.trunc(userNumber / 10) % 10;
+  let units = userNumber % 10;
+  console.log(`${userNumber} has ${hundreds} hundreds ${tens} tens ${units} units`);
 </script>
 </body>
 </html>

@@ -23,7 +23,8 @@
   "use strict";
 
   const temperatur = Number(prompt('Enter the temperature value in degrees Celsius'));
-  alert(`Celsius: ${temperatur}, Fahrenheit: ${(9 / 5) * temperatur + 32}`);
+  const fTemperature = ((9 / 5) * temperatur + 32).toFixed(2);
+  alert(`Celsius: ${temperatur}, Fahrenheit: ${fTemperature}`);
 </script>
 </body>
 </html>
