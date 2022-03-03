@@ -37,7 +37,7 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
     * @returns {string} Слово в необходимом склонении.
     */
   function getDeclination(count, one, two, five) {
-    count = count % 100;
+    count = (count % 100) % 10;
     if (count >= 5 && count <= 20) {
       return five;
     } else if (count > 1 && count < 5) {
