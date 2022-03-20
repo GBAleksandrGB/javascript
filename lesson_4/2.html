@@ -57,8 +57,9 @@
   }
 
   PostES5.prototype.edit = function(newText) {
-    this.text = newText, this.datetime = new Date();  
-  }
+    this.text = newText;
+    this.datetime = new Date();  
+  };
 
 //   const postES51 = new PostES5(
 //     'Alex',
@@ -82,7 +83,7 @@
   AttachedPostES5.prototype.makeTextHighlighted = function() {
     this.highlighted = true;
     this.datetime = new Date();
-  }
+  };
 
   const postES52 = new AttachedPostES5(
       'Alex',
@@ -98,7 +99,7 @@
       
   postES52.edit(
     'Слово не воробей. Всё не воробей, кроме воробья. Воробей тоже не воробей, \
-потому что "воробей" - это слово, а слово не воробей.')
+потому что "воробей" - это слово, а слово не воробей.');
 
   postES52.makeTextHighlighted();
 
@@ -130,16 +131,13 @@
 
 
   class AttachedPostES6 extends PostES6 {
-    constructor(author, text) {
-      super(author, text);
-      this.highlighted = false;
-    }
-
+    highlighted = false;
+    
     makeTextHighlighted() {
       this.highlighted = true;
       this.datetime = new Date();
     }
-  }
+  } 
 
   const postES62 = new AttachedPostES6('Valera', 'Hellllllllllooooooooooooooo');
   

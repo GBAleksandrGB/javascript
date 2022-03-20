@@ -27,7 +27,7 @@
 
   ProductES5.prototype.make25Discount = function() {
     return this.newPrice = this.price * 0.75;
-  }
+  };
 
   const productOne = new ProductES5('Яблоко', 100);
   const newProductOnePrice = productOne.make25Discount();
@@ -60,7 +60,7 @@
 
     get make25Discount() {
       let date = new Date();
-      if (date.getDay() == 5) {
+      if (date.getDay() === 5) {
         return this.price * 0.75;
       } else {
         return 'только в пятницу';
@@ -74,7 +74,8 @@
 
 
   class ProductES6withSet {
-    newPrice = 0
+    newPrice = 0;
+
     constructor(name, price) {
       this.name = name;
       this.price = price;
