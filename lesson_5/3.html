@@ -56,15 +56,15 @@
   1. Необходимо вывести сообщение в консоль "все теги прогрузились", когда все
   теги будут созданы браузером.
   */
-  const funcContentLoad = () => console.log('все теги прогрузились');
-  document.addEventListener('DOMContentLoaded', funcContentLoad);
+  document.addEventListener(
+    'DOMContentLoaded', () => console.log('все теги прогрузились')
+    );
 
   /*
   2. Необходимо вывести сообщение в консоль "страница загрузилась", когда все
   ресурсы страницы будут загружены.
   */
-  const funcSiteLoad = () => console.log('страница загрузилась');
-  window.addEventListener('load', funcSiteLoad);
+  window.addEventListener('load', () => console.log('страница загрузилась'));
 
   /*
   3. При клике на какой-либо тег на странице в консоль должно выводиться
@@ -103,16 +103,12 @@
   Если клик был не по кнопке, то ничего выводить не нужно.
   Необходимо использовать делегирование.
    */ 
-  function funcEvent() {
-    
-    if (event.target.tagName !== 'BUTTON') {
-      return;
-    }
-
-    console.log(event.target.textContent);
-  }
-  
-  document.querySelector('ul').addEventListener('click', funcEvent);
+   document.addEventListener('click', event => {
+     const containStr = event.target.classList.contains('super_element')
+     ? 'присутствует' : 'отсутствует';
+     console.log(`Класс "super_element" ${containStr}\
+в элементе "${event.target.tagName.toLowerCase()}".`);
+   })
   
   /*
   6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только

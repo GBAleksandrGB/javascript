@@ -43,7 +43,7 @@
   не было.
    */
   const elemBtn = document.querySelector('.btn');
-  elemBtn.classList.toggle('btn-secondary')
+  elemBtn.classList.toggle('btn-secondary');
   console.log(elemBtn.className);
   
   /*
@@ -74,7 +74,9 @@
   6. Добавьте атрибут data-dd со значением 3 элементу у которого существует
   атрибут "aria-labelledby" равный "dropdownMenuButton" используя dataset.
    */
-  const elemData = document.querySelector('[aria-labelledby="dropdownMenuButton"]');
+  const elemData = document.querySelector(
+    '[aria-labelledby="dropdownMenuButton"]'
+    );
   elemData.dataset.dd='3';
   console.log(elemData.attributes);
 
