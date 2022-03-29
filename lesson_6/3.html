@@ -42,8 +42,6 @@
       if (star && star.classList.contains('fas')) {
         star.classList.add('golden');
         return addCls(e, star.previousElementSibling);
-      } else {
-        return;
       }
   });
   
@@ -56,8 +54,6 @@
       if (star && star.classList.contains('fas')) {
         star.classList.remove('golden');
         return addCls(e, star.previousElementSibling);
-      } else {
-        return;
       }
     });
 

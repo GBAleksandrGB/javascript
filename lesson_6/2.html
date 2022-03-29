@@ -65,8 +65,9 @@
   должно моментально отображаться в span. То есть при печати в input'е тег span
   также должен меняться.
   */
+  const inputText = document.querySelector('span');
   document.querySelector('input#from').addEventListener('input', (e) => {
-    document.querySelector('span').textContent = e.target.value;
+    inputText.textContent = e.target.value;
   });
 
   /*
@@ -95,7 +96,7 @@
   const formEls = document.querySelector('form');
   const els = formEls.querySelectorAll(
     'input.form-control, select.form-control'
-    );
+  );
 
   formEls.addEventListener('submit', (e) => {
     formEls.querySelectorAll('input.form-control, select.form-control')
