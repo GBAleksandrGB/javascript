@@ -63,7 +63,7 @@
   let currentActiveElement = document.querySelector('.active');
   let currentText = document.querySelector('div.text');
   document.querySelector('.nav-tabs').addEventListener('click', (e) => {
-    if (!event.target.classList.contains('nav-link')) {
+    if (!e.target.classList.contains('nav-link')) {
       return;
     }
 
@@ -71,7 +71,6 @@
     e.target.classList.add('active');
     currentActiveElement = e.target;
     currentText.textContent = panelText[e.target.parentElement.dataset.text];
-    // console.log(e.target.parentElement.dataset);
   });
   
   /*
@@ -86,7 +85,6 @@
     .toString();
   inputElement.addEventListener('input', event => {
     inputText.style.fontSize = `${event.target.value}px`;
-    // console.log(inputElement.value);
   });
 
 </script>
