@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const basketCounterEl = document.querySelector('.cartIconWrap span');
 const basketTotalVal = document.querySelector('.basketTotalValue');
@@ -29,8 +29,8 @@ function addToCard(id, name, price) {
       name,
       price,
       count: 0 
-  };
-}
+    };
+  }
   basket[id].count++;
   basketCounterEl.textContent = getTotalBasketCount().toString();
   basketTotalEl.textContent = getTotalBasketPrice().toFixed(2);
